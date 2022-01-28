@@ -53,9 +53,15 @@ public class KFProjetoServletCalculadora extends HttpServlet {
 			//chamada da regra de negócio
 			Calculadora c = new Calculadora(val1, val2);
 			int resultadoSoma = c.somar();
+			int resultadoDivisao = c.divir();
+			int resultadoSubtracao = c.subtrair();
+			int resultadoMultiplicacao = c.multiplicar();
 			
 			//resultado da regra de negócio
 			request.setAttribute("resSoma", resultadoSoma);
+			request.setAttribute("resDivisao", resultadoDivisao);
+			request.setAttribute("resSubtracao", resultadoSubtracao);
+			request.setAttribute("resMultiplicacao", resultadoMultiplicacao);
 		}
 		
 		request.getRequestDispatcher("/").forward(request, response);

@@ -13,4 +13,16 @@ public class Calculadora {
 	public int somar() {
 		return this.valor1 + this.valor2;
 	}
+	
+	public int divir() {
+		return this.valor1 / this.valor2;
+	}
+	
+	public int subtrair() {
+		return this.valor1 - this.valor2;
+	}
+	
+	public int multiplicar() {
+		return this.valor1 * this.valor2;
+	}
 }
