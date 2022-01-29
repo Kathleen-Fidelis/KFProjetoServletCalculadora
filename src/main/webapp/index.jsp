@@ -19,12 +19,12 @@
 		    <label for="exampleInputValor2" class="form-label">Valor 2</label>
 		    <input type="text" class="form-control" name="valor2">
 		  </div>
-		  <h4>Resultado soma=${requestScope.resSoma}</h4>
-		  <h4>Resultado divisão=${requestScope.resDivisao}</h4>
-		  <h4>Resultado subtração=${requestScope.resSubtracao}</h4>
-		  <h4>Resultado multiplicação=${requestScope.resMultiplicacao}</h4>
+		  <h4>Resultado=${requestScope.res}</h4>
 		  <button type="reset" class="btn btn-primary">Limpar</button>	
-		   <button type="submit" class="btn btn-primary">Realizar operações</button>	
+		  <button type="submit" class="btn btn-primary" name="soma">Somar</button>	
+		  <button type="submit" class="btn btn-primary" name="divisao">Dividir</button>	
+		  <button type="submit" class="btn btn-primary" name="subtracao">Subtrair</button>
+		  <button type="submit" class="btn btn-primary" name="multiplicacao">Multiplicar</button>		
 		</form>
 	</div>
 </body>

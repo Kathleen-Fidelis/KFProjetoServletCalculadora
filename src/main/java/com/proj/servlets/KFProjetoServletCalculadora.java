@@ -52,16 +52,31 @@ public class KFProjetoServletCalculadora extends HttpServlet {
 			
 			//chamada da regra de negócio
 			Calculadora c = new Calculadora(val1, val2);
-			int resultadoSoma = c.somar();
-			int resultadoDivisao = c.divir();
-			int resultadoSubtracao = c.subtrair();
-			int resultadoMultiplicacao = c.multiplicar();
+//			int resultadoSoma = c.somar();
+//			int resultadoDivisao = c.divir();
+//			int resultadoSubtracao = c.subtrair();
+//			int resultadoMultiplicacao = c.multiplicar();
 			
 			//resultado da regra de negócio
-			request.setAttribute("resSoma", resultadoSoma);
-			request.setAttribute("resDivisao", resultadoDivisao);
-			request.setAttribute("resSubtracao", resultadoSubtracao);
-			request.setAttribute("resMultiplicacao", resultadoMultiplicacao);
+//			request.setAttribute("resSoma", resultadoSoma);
+//			request.setAttribute("resDivisao", resultadoDivisao);
+//			request.setAttribute("resSubtracao", resultadoSubtracao);
+//			request.setAttribute("resMultiplicacao", resultadoMultiplicacao);
+			
+			if(request.getParameter("soma") != null) {
+				int resultadoSoma = c.somar();
+				request.setAttribute("res", resultadoSoma);
+			}else if(request.getParameter("divisao") != null) {
+				int resultadoDivisao = c.divir();
+				request.setAttribute("res", resultadoDivisao);
+			}else if(request.getParameter("subtracao") != null) {
+				int resultadoSubtracao = c.subtrair();
+				request.setAttribute("res", resultadoSubtracao);
+			}else if(request.getParameter("multiplicacao") != null) {
+				int resultadoMultiplicacao = c.multiplicar();
+				request.setAttribute("res", resultadoMultiplicacao);
+				
+			}
 		}
 		
 		request.getRequestDispatcher("/").forward(request, response);
